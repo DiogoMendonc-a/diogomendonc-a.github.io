@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Diogo Mendonça - CUBOS</title>
+		<title>Diogo Mendonça - Our Will</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -40,12 +40,12 @@
 					</nav>
 
 				<!-- Banner -->
-				<span class="image main"><img src="cubos/day.png" alt="" /></span>
+				<span class="image main"><img src="our will/banner.png" alt="" /></span>
 					<section id="banner">
 						<div class="inner">
 							<div class="logo"><span class="icon fa-gamepad"></span></div>
-							<h2>CUBOS</h2>
-							<p>A voxel based ECS engine, made from scratch in C++.</p>
+							<h2>Our Will</h2>
+							<p>A cross between a visual novel and a turn based RPG.</p>
 						</div>
 					</section>
 
@@ -53,39 +53,28 @@
 						<div class="inner">
 							<section>
 								<ul class="actions fit">
-									<li><a href="https://gamedevtecnico.github.io/cubos/docs/" class="button primary fit">Project Page</a></li>
-									<li><a href="https://github.com/GameDevTecnico/cubos" class="button primary fit">
-										<span class="icon brands fa-github">
-
-										</span>
-										Source
+									<li><a href="https://antunes10.itch.io/our-will" class="button primary fit">
+										<span class="icon brands fa-itch-io"></span>
+										Game Page
+									</a></li>
+									<li><a class="button fit">
+										<span class="icon brands fa-steam"></span>
+										Game Page (Coming Soon)
 									</a></li>
 								</ul>
 <p>
-	CUBOS aims to be a simple, but powerful game engine for PC, where everything is made out of voxels.
-
-	It is open source and free to use for any purpose. Written in modern C++ (20) and with data-oriented design in mind, its goal is to be both performant and highly flexible.
+	Our Will is a narrative adventure with turn-based combat, about a young girl tasked with leading a small company of warriors, into an unknown and mystical land, in search of a cure to save their village.
 </p>
 <p>
-	The engine is divided into three parts: The core, a ECS system that can fit plugins; The engine itself, which is a collection of plugins that allow functionality; and tools, stuff that is only useful for developers and should not be included in final builds of a game.
-	My work was on both the engine and the tools.
+	As lead programmer, I designed most of the backend of the game, namely the system that allows characters to have abilities with different effects, the outer gameplay loops of what happens outside of combat and how combat is integrated with other elements of the game, and the system for displaying the consequences of actions.
+	The maintainig of game state was also within my responsabilities.
 </p>
-<p><span class="image left"><img src="cubos/gizmos.gif" alt="" /></span>
-	On the engine, I set up the renderer plugin, which draws to the window, and created the gizmos plugin, which uses a completely different and independent system to draw basic primitives with some functionailty. Gizmos can be drawn in different spaces (world viewport and screen), and can also be interacted with.
+<p>
+	Our Will's combat system at its core uses a state machine, to keep track of at what point of combat we are, and whose turn it is.
+	Then it uses a system of Scriptable Objects to define actions, and a lot of polimorphism and events to allow them full functionality.
+	Another event system is built on top of this, that stores a queue of events that are triggered during the execution of the combat logic (which is instant), that are later called by the UI to display everything in its own time.
+	These events are composites that allow for both parallelism and sequencing of the displaying.
 </p>
-<p>Simplified, gizmos interaction works by including the gizmo id when rendering to a pixel, and then simply reading which gizmo is below the mouse.
-The image on the left showcases gizmos in different spaces, with a 4 camera split screen set up.
-</p>
-<br>
-<p><span class="image right"><img src="cubos/transform.gif" alt="" /></span>
-	On the tools, I set up most of the inspectors and editors we currently have, making use of imGui. Most recently I worked on getting a transform gizmo up and running, though it still has some kinks to iron out.
-</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<span class="image fit"><img src="cubos/night.png" alt="" /></span>
 
 							</section>
 						</div>
