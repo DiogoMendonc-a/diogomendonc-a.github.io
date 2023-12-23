@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Diogo Mendonça - CUBOS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Home</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="projects.html">Long Term Projects</a></li>
+								<li><a href="jams.html">Game Jams</a></li>
+								<li><a href="academic.html">Academic Projects</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+				<span class="image main"><img src="cubos/day.png" alt="" /></span>
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-gamepad"></span></div>
+							<h2>CUBOS</h2>
+							<p>A voxel based ECS engine, made from scratch in C++.</p>
+						</div>
+					</section>
+
+					<div class="wrapper">
+						<div class="inner">
+							<section>
+								<ul class="actions fit">
+									<li><a href="https://gamedevtecnico.github.io/cubos/docs/" class="button primary fit">Project Page</a></li>
+									<li></li><a href="https://github.com/GameDevTecnico/cubos" class="button primary fit">
+										<span class="icon brands fa-github">
+
+										</span>
+										Source
+									</a></li>
+								</ul>
+<p>
+	CUBOS aims to be a simple, but powerful game engine for PC, where everything is made out of voxels.
+
+	It is open source and free to use for any purpose. Written in modern C++ (20) and with data-oriented design in mind, its goal is to be both performant and highly flexible.
+</p>
+<p>
+	The engine is divided into three parts: The core, a ECS system that can fit plugins; The engine itself, which is a collection of plugins that allow functionality; and tools, stuff that is only useful for developers and should not be included in final builds of a game.
+	My work was on both the engine and the tools.
+</p>
+<p><span class="image left"><img src="cubos/gizmos.gif" alt="" /></span>
+	On the engine, I set up the renderer plugin, which draws to the window, and created the gizmos plugin, which uses a completely different and independent system to draw basic primitives with some functionailty. Gizmos can be drawn in different spaces (world viewport and screen), and can also be interacted with.
+</p>
+<p>Simplified, gizmos interaction works by including the gizmo id when rendering to a pixel, and then simply reading which gizmo is below the mouse.
+The image on the left showcases gizmos in different spaces, with a 4 camera split screen set up.
+</p>
+<br>
+<p><span class="image right"><img src="cubos/transform.gif" alt="" /></span>
+	On the tools, I set up most of the inspectors and editors we currently have, making use of imGui. Most recently I worked on getting a transform gizmo up and running, though it still has some kinks to iron out.
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+							</section>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-envelope"><a href="#">diogo.q.cm@gmail.com</a></li>
+								<li class="icon brands fa-twitter"><a href="#">https://twitter.com/Diogo_M__</a></li>
+								<li class="icon brands fa-github"><a href="#">https://github.com/DiogoMendonc-a</a></li>
+								<li class="icon brands fa-itch-io"><a href="#">https://ainqui.itch.io/</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
