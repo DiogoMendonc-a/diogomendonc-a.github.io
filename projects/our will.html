@@ -75,6 +75,9 @@
 	Another event system is built on top of this, that stores a queue of events that are triggered during the execution of the combat logic (which is instant), that are later called by the UI to display everything in its own time.
 	These events are composites that allow for both parallelism and sequencing of the displaying.
 </p>
+<p>
+	The UI was also made mostly by me, and what it does is read the events the combat system raises, to display them happening, and then make use of user interaction to send commands back to the combat system.
+</p>
 
 							</section>
 							<a href="../projects.html" class="button fit">
