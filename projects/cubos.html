@@ -70,8 +70,10 @@
 	The engine is divided into three parts: The core, a ECS system that can fit plugins; The engine itself, which is a collection of plugins that allow functionality; and tools, stuff that is only useful for developers and should not be included in final builds of a game.
 	My work was on both the engine and the tools.
 </p>
+<p> I built the engine's entire UI system. It allows for positioniong UI elements however they might be needed, with pivots, anchors, offsets, stretches and some more such tools, and you can easily display images and text. It is very efficient, and allows for transparency and depth sorting, making use of deffered draw commands.
+</p>
 <p><span class="image left"><img src="cubos/gizmos.gif" alt="" /></span>
-	On the engine, I set up the renderer plugin, which draws to the window, and created the gizmos plugin, which uses a completely different and independent system to draw basic primitives with some functionailty. Gizmos can be drawn in different spaces (world viewport and screen), and can also be interacted with.
+	I set up the renderer plugin, which draws to the window, and created the gizmos plugin, which uses a completely different and independent system to draw basic primitives with some functionailty. Gizmos can be drawn in different spaces (world viewport and screen), and can also be interacted with.
 </p>
 <p>Simplified, gizmos interaction works by including the gizmo id when rendering to a pixel, and then simply reading which gizmo is below the mouse.
 The image on the left showcases gizmos in different spaces, with a 4 camera split screen set up.
